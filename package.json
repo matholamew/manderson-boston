@@ -1,4 +1,7 @@
 {
+  "name": "manderson-boston-root",
+  "version": "1.0.0",
+  "private": true,
   "devDependencies": {
     "wrangler": "^4.64.0"
   }
