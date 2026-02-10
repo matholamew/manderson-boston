@@ -9,148 +9,217 @@ export default async function Home() {
     .order('created_at', { ascending: false });
 
   return (
-    <div className="relative isolate min-h-screen">
-      {/* 2. The "Boston Tech" Gradient Background */}
+    <div className="relative isolate min-h-screen selection:bg-accent selection:text-white">
+      {/* Dynamic Background Spotlight */}
       <div className="fixed inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-50/50 via-slate-50 to-white"></div>
 
-      {/* 1. The Identity Hero */}
-      <section className="relative pt-24 pb-16 md:pt-40 md:pb-32 animate-in fade-in slide-in-from-bottom-8 duration-1000">
+      {/* 1. The Identity Hero (Ivy Base) */}
+      <section className="relative pt-32 pb-24 md:pt-48 md:pb-40 overflow-hidden">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl">
-            <h1 className="text-6xl md:text-8xl font-bold tracking-tight text-primary font-sans leading-[1.05] mb-8">
-              Architecting <span className="text-foreground italic font-serif font-light">Stability</span> <br />
-              for the Digital Age.
-            </h1>
-            <p className="mt-8 text-xl md:text-2xl text-gray-600 font-serif leading-relaxed max-w-2xl">
-              Senior Systems Architect & DBA representing the Boston technocracy.
-              I specialize in "Level 4" clinical intervention for complex data environments.
-            </p>
+          <div className="relative z-10">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/5 border border-primary/10 text-[10px] font-bold uppercase tracking-widest text-primary mb-8 animate-in fade-in slide-in-from-left-4 duration-700">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
+              </span>
+              Boston, MA // Clinical Systems Architect
+            </div>
 
-            {/* Systems Performance Widget */}
-            <div className="mt-12 inline-flex items-center gap-6 p-1 pr-6 bg-white/50 backdrop-blur-sm rounded-full border border-slate-200/60 shadow-antigravity">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-white text-xs font-bold">99.9</div>
-              <div className="text-sm font-sans font-semibold text-gray-500 tracking-wide uppercase">
-                Avg Uptime <span className="text-primary ml-2">Maintained</span>
+            <h1 className="text-7xl md:text-9xl font-extrabold tracking-tighter text-primary font-sans leading-[0.85] animate-in fade-in slide-in-from-bottom-8 duration-1000">
+              ARCHITECTING <br />
+              <span className="text-foreground italic font-serif font-light tracking-normal lowercase">stability</span> <br />
+              <span className="text-accent underline decoration-4 underline-offset-8">FORCEFULLY.</span>
+            </h1>
+
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-end">
+              <p className="text-xl md:text-2xl text-gray-600 font-serif leading-relaxed max-w-xl animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-200">
+                Senior Systems Architect & DBA. I provide high-integrity clinical interventions for mission-critical data infrastructure.
+                Silicon Valley performance meets Ivy League precision.
+              </p>
+
+              <div className="flex flex-col gap-6 items-start md:items-end animate-in fade-in slide-in-from-right-8 duration-1000 delay-500">
+                {/* Precision Metrics Widget */}
+                <div className="p-4 bg-white/40 backdrop-blur-xl border border-white/60 shadow-antigravity rounded-2xl flex items-center gap-6 group hover:scale-[1.02] transition-transform">
+                  <div className="text-right">
+                    <div className="text-[10px] font-bold uppercase text-gray-400 tracking-widest">Uptime Record</div>
+                    <div className="text-3xl font-black text-primary font-sans tabular-nums">99.999%</div>
+                  </div>
+                  <div className="h-12 w-[1px] bg-gray-100" />
+                  <div className="text-left">
+                    <div className="text-[10px] font-bold uppercase text-gray-400 tracking-widest">Latency reduction</div>
+                    <div className="text-3xl font-black text-accent font-sans tabular-nums">-45%</div>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div className="mt-16 flex items-center gap-8">
+            <div className="mt-16 flex items-center gap-8 animate-in fade-in slide-in-from-bottom-16 duration-1000 delay-700">
               <a
                 href="#evidence"
-                className="rounded-full bg-primary px-10 py-4 text-sm font-bold text-white shadow-antigravity hover:bg-primary/90 transition-all hover:scale-105 active:scale-95 font-sans"
+                className="group relative inline-flex items-center justify-center rounded-full bg-primary px-12 py-5 text-sm font-black text-white shadow-antigravity hover:bg-primary/90 transition-all active:scale-95"
               >
-                The Evidence
+                THE EVIDENCE
+                <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>
               </a>
-              <a href="#contact" className="text-sm font-bold leading-6 text-primary font-sans group">
-                Direct Query <span aria-hidden="true" className="inline-block transition-transform group-hover:translate-x-1">→</span>
+              <a href="#contact" className="text-sm font-black text-primary hover:text-accent transition-colors tracking-widest uppercase">
+                DIRECT QUERY
               </a>
             </div>
           </div>
         </div>
+
+        {/* Geometric Background Movement */}
+        <div className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/2 opacity-[0.03] pointer-events-none">
+          <svg width="800" height="800" viewBox="0 0 100 100" className="animate-[spin_60s_linear_infinite]">
+            <rect x="0" y="0" width="100" height="100" fill="none" stroke="currentColor" strokeWidth="0.1" />
+            <circle cx="50" cy="50" r="48" fill="none" stroke="currentColor" strokeWidth="0.05" />
+            <path d="M0 50 L100 50 M50 0 L50 100" stroke="currentColor" strokeWidth="0.05" />
+          </svg>
+        </div>
       </section>
 
-      {/* 2. The Evidence Grid (Bento Box) */}
-      <section id="evidence" className="py-32">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-16">
-            <h2 className="text-sm font-bold uppercase tracking-[0.2em] text-accent mb-4 font-sans">The Evidence</h2>
-            <h3 className="text-4xl font-bold text-primary font-sans">Architecture & Optimizations</h3>
+      {/* 2. The Evidence Grid (Dark Bento - The "Edgy" Side) */}
+      <section id="evidence" className="relative py-32 bg-background-dark text-white overflow-hidden grain-texture">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-20">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-20">
+            <div>
+              <h2 className="text-sm font-black uppercase tracking-[0.4em] text-accent mb-4 font-sans">02 // EVIDENCE</h2>
+              <h3 className="text-5xl md:text-7xl font-extrabold text-white font-sans tracking-tighter">CLINICAL <br />OPTIMIZATIONS.</h3>
+            </div>
+            <p className="mt-8 md:mt-0 text-gray-400 font-serif text-lg max-w-sm italic">
+              Results aren't requested; they're engineered. Every optimization is a surgical procedure on latency.
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[300px]">
-            {/* Case Study 01 */}
-            <div className="md:col-span-8 md:row-span-2 group relative overflow-hidden bg-white/80 backdrop-blur-md border border-slate-200 shadow-antigravity rounded-3xl p-8 md:p-12 transition-all hover:-translate-y-2">
-              <div className="relative z-10 flex flex-col h-full justify-between">
-                <div>
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-accent mb-4 block">Case Study 01</span>
-                  <h4 className="text-3xl font-bold text-primary mb-6 font-sans">Global Multi-Cloud Migration</h4>
-                  <p className="text-lg text-gray-600 font-serif leading-relaxed max-w-xl">
-                    Orchestrated the zero-downtime migration of a legacy SQL cluster to a cloud-native architecture
-                    spanning three regions. Improved query latency by 45%.
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 auto-rows-[350px]">
+            {/* Mega Card: The "Aggressive" Case Study */}
+            <div className="md:col-span-8 md:row-span-2 group relative overflow-hidden bg-white/[0.03] backdrop-blur-md border border-white/10 rounded-[2.5rem] p-12 transition-all hover:-translate-y-4 hover:bg-white/[0.06] hover:border-white/20 shadow-antigravity">
+              <div className="flex flex-col h-full justify-between">
+                <div className="space-y-6">
+                  <div className="inline-flex items-center gap-3">
+                    <span className="h-px w-8 bg-accent" />
+                    <span className="text-[10px] font-black uppercase tracking-widest text-accent">PRIMARY CASE STUDY</span>
+                  </div>
+                  <h4 className="text-4xl md:text-5xl font-black text-white font-sans leading-none tracking-tighter">ZERO-LATENCY <br />MULTI-REGION SYNC.</h4>
+                  <p className="text-xl text-gray-300 font-serif leading-relaxed max-w-xl">
+                    Overhauled a global SQL cluster for a Tier-1 fintech.
+                    Implemented sub-second replication across 3 continents while maintaining strict ACID compliance.
                   </p>
                 </div>
-                <div className="flex gap-4">
-                  {['PostgreSQL', 'GCP', 'Terraform'].map(t => (
-                    <span key={t} className="text-[10px] font-bold text-gray-400 border border-gray-200 px-3 py-1 rounded-full uppercase tracking-tighter">{t}</span>
+                <div className="flex flex-wrap gap-4">
+                  {['PSQL', 'Kubernetes', 'GCP', 'Direct Connect'].map(t => (
+                    <span key={t} className="text-[10px] font-black bg-white/10 px-4 py-2 rounded-full uppercase tracking-widest">{t}</span>
                   ))}
                 </div>
               </div>
-              <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-[radial-gradient(circle,_var(--tw-gradient-stops))] from-blue-100/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              {/* Edge Movement Graphic */}
+              <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-accent/10 to-transparent skew-x-12 translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-700" />
             </div>
 
-            {/* InAPinch.run */}
-            <div className="md:col-span-4 md:row-span-1 group bg-primary rounded-3xl p-8 text-white shadow-antigravity transition-all hover:-translate-y-2 overflow-hidden relative">
+            {/* InAPinch.run (Edgy Link) */}
+            <div className="md:col-span-4 md:row-span-1 group bg-accent rounded-[2.5rem] p-10 text-white shadow-2xl transition-all hover:scale-[1.02] hover:-rotate-1 overflow-hidden relative border border-white/10">
               <div className="relative z-10">
-                <h4 className="text-xl font-bold font-sans mb-3">InAPinch.run</h4>
-                <p className="text-sm opacity-80 font-serif leading-relaxed">
-                  A "weird" geolocation tool for emergencies. Clean code, real-world utility.
+                <h4 className="text-2xl font-black font-sans mb-4 tracking-tighter uppercase italic">Emergency <br />Ingestion.</h4>
+                <p className="text-sm text-white/80 font-serif leading-relaxed line-clamp-3">
+                  "InAPinch.run" — Geolocation tool for physiological emergencies. High-performance utility for a visceral problem.
                 </p>
-                <Link href="/projects/in-a-pinch" className="text-xs font-bold uppercase tracking-widest mt-6 inline-block border-b border-white/30 hover:border-white transition-all pb-1">Review</Link>
+                <Link href="/projects/in-a-pinch" className="mt-8 flex items-center gap-2 group/btn font-black text-xs uppercase tracking-[0.2em]">
+                  VIEW STUDY <span className="transition-transform group-hover/btn:translate-x-2">→</span>
+                </Link>
               </div>
-              <div className="absolute top-0 right-0 p-4 opacity-20 transition-transform group-hover:scale-110 group-hover:opacity-40">
-                <svg className="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <div className="absolute bottom-0 right-0 p-8 opacity-10 group-hover:scale-125 transition-transform duration-700">
+                <svg className="w-24 h-24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
             </div>
 
-            {/* Performance Audit */}
-            <div className="md:col-span-4 md:row-span-1 bg-white/80 backdrop-blur-md border border-slate-200 shadow-antigravity rounded-3xl p-8 transition-all hover:-translate-y-2">
-              <h4 className="text-xl font-bold text-primary font-sans mb-3">Performance Audit</h4>
-              <p className="text-sm text-gray-500 font-serif leading-relaxed">
-                Refined query plans for a fintech unicorn, reducing CPU overhead by 60% during peak trade hours.
+            {/* Performance Audit (Precision) */}
+            <div className="md:col-span-4 md:row-span-1 bg-white/[0.03] backdrop-blur-md border border-white/10 rounded-[2.5rem] p-10 shadow-antigravity transition-all hover:-translate-y-2 hover:bg-white/[0.06]">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary text-white mb-6">
+                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <h4 className="text-xl font-black text-white font-sans mb-4 uppercase tracking-tighter italic">QUERY SURGERY</h4>
+              <p className="text-sm text-gray-400 font-serif leading-relaxed">
+                Reduced query overhead for a fintech leader during 10x traffic spikes. Scalability through precision.
               </p>
             </div>
 
-            {/* Dynamic Projects from Supabase */}
+            {/* Dynamic Project */}
             {(projects as Project[])?.slice(0, 1).map(project => (
-              <div key={project.id} className="md:col-span-4 md:row-span-1 bg-white/80 backdrop-blur-md border border-slate-200 shadow-antigravity rounded-3xl p-8 transition-all hover:-translate-y-2">
-                <h4 className="text-xl font-bold text-primary font-sans mb-3">{project.title}</h4>
-                <p className="text-sm text-gray-500 font-serif line-clamp-2">{project.description}</p>
-                <a href={project.live_url} className="text-xs font-bold uppercase tracking-widest text-accent mt-4 inline-block hover:opacity-80">Link →</a>
+              <div key={project.id} className="md:col-span-4 md:row-span-1 bg-white/[0.03] backdrop-blur-md border border-white/10 rounded-[2.5rem] p-10 shadow-antigravity transition-all hover:-translate-y-2 group">
+                <h4 className="text-xl font-black text-white font-sans mb-4 uppercase tracking-tighter truncate italic">{project.title}</h4>
+                <p className="text-sm text-gray-400 font-serif line-clamp-3 mb-6">{project.description}</p>
+                <a href={project.live_url} className="text-[10px] font-black uppercase tracking-widest text-accent group-hover:underline">RAW_DATA →</a>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* 3. The Tech Stack (The Schema) */}
-      <section className="py-24 bg-white border-y border-gray-100">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-            <h2 className="text-2xl font-bold text-primary font-sans tracking-tight">The Schema. <span className="font-serif italic font-light text-gray-400">Core Proficiencies.</span></h2>
-            <div className="flex flex-wrap justify-center gap-12 grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-700">
+      {/* 3. The Tech Stack (Monochromatic Precision) */}
+      <section className="py-24 bg-white border-y border-gray-100 overflow-hidden relative">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-12">
+            <h2 className="text-2xl font-black text-primary font-sans tracking-tight italic">THE SCHEMA: <span className="font-serif font-light text-gray-300 not-italic lowercase">stack_dump()</span></h2>
+            <div className="flex flex-wrap justify-center gap-16">
               {['PostgreSQL', 'Google Cloud', 'Terraform', 'Next.js', 'Cloudflare', 'Redis'].map(tech => (
-                <span key={tech} className="text-sm font-bold uppercase tracking-[0.3em] font-sans text-primary">{tech}</span>
+                <span key={tech} className="text-xs font-black uppercase tracking-[0.5em] font-sans text-gray-300 hover:text-accent transition-colors cursor-default">
+                  {tech}
+                </span>
               ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* 4. The Direct Query (Contact) */}
-      <section id="contact" className="py-32 bg-white">
+      {/* 4. The Direct Query (Clinical Contact) */}
+      <section id="contact" className="py-32 bg-background grain-texture">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="bg-primary rounded-[3rem] p-12 md:p-20 text-white shadow-[0_50px_100px_-20px_rgba(0,53,94,0.3)] overflow-hidden relative">
-            <div className="relative z-10 flex flex-col lg:flex-row gap-16 items-start lg:items-center">
-              <div className="flex-1">
-                <h2 className="text-4xl md:text-5xl font-bold font-sans mb-6">Let's solve for <br /> <span className="italic font-serif font-light text-blue-200">Scalability.</span></h2>
-                <p className="text-lg opacity-80 font-serif leading-relaxed max-w-md">
-                  Available for architectural consulting, data strategy audits, or deep-dives into mission-critical infra.
-                </p>
-              </div>
-              <div className="w-full lg:w-[400px]">
-                <form className="space-y-4">
-                  <input type="text" placeholder="Name" className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-accent/50 transition-all font-sans" />
-                  <input type="email" placeholder="Email" className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-accent/50 transition-all font-sans" />
-                  <textarea placeholder="Message" rows={4} className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-accent/50 transition-all font-sans" />
-                  <button className="w-full bg-accent hover:bg-accent/90 text-white font-bold py-4 rounded-xl shadow-lg transition-all active:scale-[0.98] font-sans">
-                    Execute Query
-                  </button>
-                </form>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
+            <div className="animate-in fade-in slide-in-from-left-8 duration-1000">
+              <h2 className="text-sm font-black uppercase tracking-[0.4em] text-accent mb-6 font-sans">04 // CONTACT</h2>
+              <h3 className="text-6xl md:text-8xl font-black text-primary font-sans leading-[0.8] mb-12 tracking-tighter">
+                INITIATE <br /> <span className="italic font-serif font-light text-gray-300 lowercase tracking-normal">intervention</span>.
+              </h3>
+              <p className="text-xl text-gray-600 font-serif leading-relaxed max-w-md">
+                Currently accepting high-stakes consulting engagements for data migrations and system architecture audits.
+              </p>
+
+              <div className="mt-12 space-y-4">
+                <div className="flex items-center gap-4 text-sm font-black text-primary font-sans tracking-widest">
+                  <span className="h-2 w-2 rounded-full bg-accent" />
+                  manderson-boston@sys.io
+                </div>
+                <div className="flex items-center gap-4 text-sm font-black text-primary font-sans tracking-widest">
+                  <span className="h-2 w-2 rounded-full bg-primary" />
+                  @manderson_arch
+                </div>
               </div>
             </div>
-            <div className="absolute top-0 right-0 -mr-40 -mt-40 w-96 h-96 bg-accent opacity-[0.05] rounded-full blur-[100px]" />
+
+            <div className="bg-white p-12 rounded-[3rem] border border-gray-100 shadow-antigravity animate-in fade-in slide-in-from-right-8 duration-1000">
+              <form className="space-y-8">
+                <div className="space-y-2">
+                  <label className="text-[10px] font-black uppercase tracking-widest text-gray-400 ml-1">USER_NAME</label>
+                  <input type="text" className="w-full border-b-2 border-gray-100 py-3 px-1 text-primary focus:border-accent outline-none transition-colors font-sans font-bold text-lg" placeholder="Identify yourself..." />
+                </div>
+                <div className="space-y-2">
+                  <label className="text-[10px] font-black uppercase tracking-widest text-gray-400 ml-1">ENVELOPE_ID</label>
+                  <input type="email" className="w-full border-b-2 border-gray-100 py-3 px-1 text-primary focus:border-accent outline-none transition-colors font-sans font-bold text-lg" placeholder="email@domain.com" />
+                </div>
+                <div className="space-y-2">
+                  <label className="text-[10px] font-black uppercase tracking-widest text-gray-400 ml-1">PAYLOAD</label>
+                  <textarea rows={4} className="w-full border-b-2 border-gray-100 py-3 px-1 text-primary focus:border-accent outline-none transition-colors font-sans font-bold text-lg resize-none" placeholder="Describe the breach/project..." />
+                </div>
+                <button className="w-full bg-primary hover:bg-accent text-white font-black py-6 rounded-2xl shadow-xl transition-all active:scale-[0.98] uppercase tracking-[0.3em] text-sm group">
+                  EXECUTE_SEND
+                  <span className="ml-2 inline-block transition-transform group-hover:translate-x-2">→</span>
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </section>
