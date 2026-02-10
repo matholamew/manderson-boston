@@ -10,6 +10,7 @@
     "cloudflare-build": "npx @opennextjs/cloudflare"
   },
   "dependencies": {
+    "@opennextjs/cloudflare": "^1.16.4",
     "next": "16.1.6",
     "react": "19.2.3",
     "react-dom": "19.2.3"
