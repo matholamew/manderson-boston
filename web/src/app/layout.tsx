@@ -30,10 +30,9 @@ export default function RootLayout({
             <div className="flex items-center gap-2 font-display font-bold text-xl text-primary tracking-tight">
               <span className="text-accent">M</span>anderson
             </div>
-            <nav className="flex items-center gap-6 text-sm font-medium text-gray-700">
-              <a href="#profile" className="hover:text-primary transition-colors font-sans">The Profile</a>
-              <a href="#projects" className="hover:text-primary transition-colors font-sans">Portfolio</a>
-              <a href="#" className="hover:text-primary transition-colors font-sans">Contact</a>
+            <nav className="flex items-center gap-6 text-sm font-black uppercase tracking-widest text-primary">
+              <a href="#evidence" className="hover:text-accent transition-colors font-sans decoration-2 underline-offset-4 hover:underline">Evidence</a>
+              <a href="#contact" className="hover:text-accent transition-colors font-sans decoration-2 underline-offset-4 hover:underline">Contact</a>
             </nav>
           </div>
         </header>
