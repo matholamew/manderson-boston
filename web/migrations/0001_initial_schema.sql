@@ -25,6 +25,16 @@ CREATE TABLE IF NOT EXISTS projects (
     created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
+-- Table for Strava Auth Tokens
+CREATE TABLE IF NOT EXISTS strava_tokens (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    athlete_id BIGINT UNIQUE,
+    refresh_token TEXT NOT NULL,
+    access_token TEXT NOT NULL,
+    expires_at BIGINT NOT NULL, -- Unix timestamp
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
 -- RLS Policies (Optional but recommended - currently public read for demonstration)
 ALTER TABLE running_stats ENABLE ROW LEVEL SECURITY;
 ALTER TABLE projects ENABLE ROW LEVEL SECURITY;
