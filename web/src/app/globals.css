@@ -110,6 +110,83 @@ h6 {
   animation: jitter 0.2s infinite;
 }
 
+.redacted {
+  color: transparent;
+  background-color: currentColor;
+  position: relative;
+  transition: background-color 0.2s;
+}
+
+.redacted:hover {
+  background-color: transparent;
+  color: inherit;
+}
+
+@keyframes glitch-skew {
+  0% {
+    transform: skew(0deg);
+  }
+
+  20% {
+    transform: skew(2deg);
+  }
+
+  40% {
+    transform: skew(-1deg);
+  }
+
+  60% {
+    transform: skew(3deg);
+  }
+
+  80% {
+    transform: skew(0deg);
+  }
+
+  100% {
+    transform: skew(-2deg);
+  }
+}
+
+.animate-glitch-skew {
+  animation: glitch-skew 1s infinite linear alternate-reverse;
+}
+
+.skew-brutalist {
+  transform: skewY(-2deg);
+}
+
+.unskew-brutalist {
+  transform: skewY(2deg);
+}
+
+@keyframes flicker {
+
+  0%,
+  19.999%,
+  22%,
+  62.999%,
+  64%,
+  64.999%,
+  70%,
+  100% {
+    opacity: 1;
+  }
+
+  20%,
+  21.999%,
+  63%,
+  63.999%,
+  65%,
+  69.999% {
+    opacity: 0.4;
+  }
+}
+
+.animate-flicker {
+  animation: flicker 4s infinite;
+}
+
 .shadow-antigravity {
   box-shadow: var(--shadow-antigravity);
 }
