@@ -52,19 +52,19 @@ export default async function Home() {
                 <span className="text-foreground italic font-serif font-light lowercase tracking-tight opacity-90 block mt-8">precision.</span>
               </h1>
 
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 mt-20 md:mt-32">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 mt-20 md:mt-32 items-start">
                 <div className="lg:col-span-1" />
-                <div className="lg:col-span-6 xl:col-span-6 relative">
+                <div className="lg:col-span-6 xl:col-span-7 2xl:col-span-6 relative">
                   <div className="absolute -top-10 md:-top-12 left-0 text-[10px] font-mono text-primary/30 uppercase tracking-widest">[NARRATIVE_STREAM]</div>
-                  <p className="text-2xl md:text-3xl lg:text-3xl xl:text-4xl text-gray-900 font-serif leading-none animate-in fade-in slide-in-from-bottom-16 duration-1000 delay-300">
+                  <p className="text-2xl md:text-3xl lg:text-3xl xl:text-3xl 2xl:text-4xl text-gray-900 font-serif leading-none animate-in fade-in slide-in-from-bottom-16 duration-1000 delay-300">
                     I provide <span className="redacted px-2">Level 4 Support</span> for broken SQL stacks.
                     Writing queries from scratch, architecting <span className="redacted px-2">absolute persistence</span> for those who can't afford to fail.
                   </p>
                 </div>
 
-                {/* Overlapping Precision Widget - Now with safer mid-range positioning */}
-                <div className="lg:col-span-5 xl:col-span-5 relative mt-16 lg:mt-0 lg:pl-12 xl:pl-0">
-                  <div className="responsive-overlap lg:relative xl:absolute xl:-top-24 xl:-left-32 p-8 md:p-12 bg-primary text-white clip-brutalist shadow-antigravity animate-in fade-in zoom-in duration-1000 delay-500 z-20 group hover-jitter transition-all hover:bg-accent border-r-[15px] md:border-r-[20px] border-accent/20">
+                {/* Overlapping Precision Widget - Shifted absolute overlap to 2xl+ */}
+                <div className="lg:col-span-5 xl:col-span-4 2xl:col-span-5 relative mt-16 lg:mt-0 lg:pl-12 xl:pl-0">
+                  <div className="responsive-overlap lg:relative 2xl:absolute 2xl:-top-24 2xl:-left-32 p-8 md:p-12 bg-primary text-white clip-brutalist shadow-antigravity animate-in fade-in zoom-in duration-1000 delay-500 z-20 group hover-jitter transition-all hover:bg-accent border-r-[15px] md:border-r-[20px] border-accent/20">
                     <div className="text-[10px] font-black uppercase tracking-[0.5em] mb-4 md:mb-6 text-white/50">NODE_HEALTH</div>
                     <div className="text-4xl md:text-6xl font-black font-sans tabular-nums mb-4 animate-flicker">99.99%</div>
                     <div className="text-[9px] md:text-[10px] font-mono opacity-80 uppercase tracking-widest leading-loose">
