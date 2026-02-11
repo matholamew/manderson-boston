@@ -232,3 +232,8 @@ h6 {
     gap: 2rem !important;
   }
 }
+
+/* Hide Next.js Dev Indicator per user request */
+nextjs-portal {
+  display: none !important;
+}
