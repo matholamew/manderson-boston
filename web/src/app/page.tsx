@@ -30,8 +30,8 @@ export default async function Home() {
       <section className="relative pt-32 pb-24 md:pt-64 md:pb-48">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="relative">
-            {/* Vertical Sidebar Text */}
-            <div className="absolute -left-12 top-0 hidden xl:block">
+            {/* Vertical Sidebar Text - Visible on all resolutions with safer positions */}
+            <div className="absolute -left-4 md:-left-8 xl:-left-12 top-0 z-20">
               <span className="text-vertical text-[10px] font-black uppercase tracking-[1.5em] text-primary/40 select-none animate-flicker">
                 BOSTON // ARCHITECT // CLASSIFIED // 0xDEADBEEF
               </span>
