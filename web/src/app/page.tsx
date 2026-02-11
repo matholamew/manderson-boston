@@ -64,7 +64,7 @@ export default async function Home() {
 
                 {/* Overlapping Precision Widget - Shifted absolute overlap to 2xl+ */}
                 <div className="lg:col-span-5 xl:col-span-4 2xl:col-span-5 relative mt-16 lg:mt-0 lg:pl-12 xl:pl-0">
-                  <div className="responsive-overlap lg:relative 2xl:absolute 2xl:-top-24 2xl:-left-32 p-8 md:p-12 bg-primary text-white clip-brutalist shadow-antigravity animate-in fade-in zoom-in duration-1000 delay-500 z-20 group hover-jitter transition-all hover:bg-accent border-r-[15px] md:border-r-[20px] border-accent/20">
+                  <div className="responsive-overlap lg:relative 2xl:absolute 2xl:-top-24 2xl:left-0 p-8 md:p-12 bg-primary text-white clip-brutalist shadow-antigravity animate-in fade-in zoom-in duration-1000 delay-500 z-20 group hover-jitter transition-all hover:bg-accent border-r-[15px] md:border-r-[20px] border-accent/20">
                     <div className="text-[10px] font-black uppercase tracking-[0.5em] mb-4 md:mb-6 text-white/50">NODE_HEALTH</div>
                     <div className="text-4xl md:text-6xl font-black font-sans tabular-nums mb-4 animate-flicker">99.99%</div>
                     <div className="text-[9px] md:text-[10px] font-mono opacity-80 uppercase tracking-widest leading-loose">
