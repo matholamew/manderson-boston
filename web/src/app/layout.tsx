@@ -17,7 +17,9 @@ export const metadata: Metadata = {
   title: "MANDERSON // Clinical Systems Architect",
   description: "High-integrity clinical interventions for mission-critical data infrastructure. Senior Systems Architect & DBA representing Boston Tech & Ivy.",
   icons: {
-    icon: "/favicon.png",
+    icon: "/icon.png?v=2",
+    shortcut: "/favicon.ico?v=2",
+    apple: "/icon.png?v=2",
   },
 };
 
