@@ -187,10 +187,48 @@ h6 {
   animation: flicker 4s infinite;
 }
 
+/* Fluid Typography Clamps */
+.text-fluid-h1 {
+  font-size: clamp(3rem, 12vw, 10rem);
+  line-height: 0.8;
+}
+
+.text-fluid-h3 {
+  font-size: clamp(2.5rem, 10vw, 8rem);
+  line-height: 0.8;
+}
+
+/* Responsive Overlaps */
+.responsive-overlap {
+  @media (max-width: 1024px) {
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    transform: none !important;
+    margin-top: 3rem;
+    width: fit-content;
+  }
+}
+
 .shadow-antigravity {
   box-shadow: var(--shadow-antigravity);
 }
 
 .text-vertical {
   writing-mode: vertical-rl;
+}
+
+.scanlines::after,
+.grain-texture::before {
+  pointer-events: none;
+  /* Ensure overlays don't block touch */
+}
+
+/* Bento Mobile Stability */
+@media (max-width: 640px) {
+  .flex-col-mobile {
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    gap: 2rem !important;
+  }
 }
