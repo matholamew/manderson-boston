@@ -185,7 +185,7 @@ export default async function Home() {
               THE_SCHEMA [<span className="group-hover:text-accent transition-colors">SQL_SCRATCH</span>]
             </h2>
             <div className="flex flex-wrap justify-center gap-x-12 md:gap-x-20 gap-y-8 md:gap-y-12">
-              {['PostgreSQL', 'SQL_Surgical', 'DBA_Intervention', 'Next.js', 'Cloudflare', 'Redis'].map(tech => (
+              {['PostgreSQL', 'SQL_Surgical', 'DBA_Intervention', 'HL7_FHIR', 'Cloudflare', 'SUPABASE_ENGINE'].map(tech => (
                 <span key={tech} className="text-xs md:text-sm font-black uppercase tracking-[0.4em] md:tracking-[0.6em] font-sans text-gray-300 hover:text-accent hover-jitter cursor-default transition-all">
                   {tech.replace('_', ' ')}
                 </span>
