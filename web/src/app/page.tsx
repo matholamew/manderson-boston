@@ -196,7 +196,7 @@ export default async function Home() {
       </section>
 
       {/* 4. The Direct Query (Breach Protocol Theme) */}
-      <section id="contact" className="py-32 md:py-64 bg-background text-primary grain-texture relative overflow-hidden">
+      <section id="contact" className="py-32 md:py-64 bg-background text-primary grain-texture relative">
         <div className="absolute top-0 right-0 p-8 md:p-12 opacity-[0.05] pointer-events-none font-mono text-[10vw] font-black select-none leading-none -translate-y-1/2">ACCESS_GRANTED</div>
 
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
@@ -204,11 +204,11 @@ export default async function Home() {
             <div className="lg:col-span-7">
               <div className="mb-12 md:mb-16 flex items-center gap-4 md:gap-6">
                 <span className="h-3 w-3 md:h-4 md:w-4 bg-accent animate-ping"></span>
-                <span className="text-[10px] font-black uppercase tracking-[0.8em] text-primary">04 // BREACH_PROTOCOL_CONTACT</span>
+                <span className="text-[10px] font-black uppercase tracking-[0.8em] text-primary">04 // CONTACT_PROTOCOL_INITIATED</span>
               </div>
               <h3 className="text-fluid-h3 font-black text-primary font-sans leading-[0.7] mb-12 md:mb-20 tracking-[-0.08em] uppercase">
                 INITIATE <br />
-                <span className="redacted px-6 hover:text-accent transition-colors">INTERVENTION</span>.
+                <span className="redacted px-6 hover:text-accent transition-colors">CONTACT</span>.
               </h3>
 
               <div className="space-y-6 md:space-y-8 font-mono text-xs md:text-sm tracking-widest uppercase text-primary/60">
@@ -222,22 +222,22 @@ export default async function Home() {
             </div>
 
             <div className="lg:col-span-5 relative">
-              <div className="p-8 md:p-16 border-[10px] md:border-[16px] border-primary bg-white shadow-[20px_20px_0px_rgba(0,53,94,0.1)] md:shadow-[40px_40px_0px_rgba(0,53,94,0.1)] group">
+              <div className="p-8 md:p-16 border-[10px] md:border-[16px] border-primary bg-white shadow-antigravity group">
                 <div className="mb-8 md:mb-12 flex justify-between items-center pb-6 border-b-4 border-gray-100">
-                  <div className="text-[10px] font-black tracking-widest">INPUT_TERMINAL_v4.2</div>
+                  <div className="text-[10px] font-black tracking-widest uppercase">INPUT_TERMINAL_v4.2</div>
                   <div className="flex gap-2">
                     {[1, 2, 3].map(i => <div key={i} className="h-2 w-2 rounded-full bg-gray-200"></div>)}
                   </div>
                 </div>
                 <form className="space-y-8 md:space-y-12">
                   <div className="space-y-3">
-                    <input type="text" className="w-full bg-transparent border-b-4 md:border-b-8 border-primary/5 py-4 md:py-6 px-2 text-primary focus:border-accent outline-none transition-all font-sans font-black text-xl md:text-2xl placeholder:opacity-10" placeholder="IDENT_STRING" />
+                    <input type="text" className="w-full bg-transparent border-b-4 md:border-b-8 border-primary/5 py-4 md:py-6 px-2 text-primary focus:border-accent outline-none transition-all font-sans font-black text-xl md:text-2xl placeholder:opacity-10" placeholder="FULL_NAME" />
                   </div>
                   <div className="space-y-3">
                     <input type="email" className="w-full bg-transparent border-b-4 md:border-b-8 border-primary/5 py-4 md:py-6 px-2 text-primary focus:border-accent outline-none transition-all font-sans font-black text-xl md:text-2xl placeholder:opacity-10" placeholder="ADDR_V4" />
                   </div>
                   <div className="space-y-3">
-                    <textarea rows={4} className="w-full bg-transparent border-b-4 md:border-b-8 border-primary/5 py-4 md:py-6 px-2 text-primary focus:border-accent outline-none transition-all font-sans font-black text-xl md:text-2xl resize-none placeholder:opacity-10" placeholder="PAYLOAD_BLOCK" />
+                    <textarea rows={4} className="w-full bg-transparent border-b-4 md:border-b-8 border-primary/5 py-4 md:py-6 px-2 text-primary focus:border-accent outline-none transition-all font-sans font-black text-xl md:text-2xl resize-none placeholder:opacity-10" placeholder="MESSAGE_PAYLOAD" />
                   </div>
                   <button className="w-full bg-primary hover:bg-accent text-white font-black py-6 md:py-10 shadow-antigravity transition-all active:scale-[0.9] uppercase tracking-[0.6em] md:tracking-[0.8em] text-[10px] md:text-xs group relative overflow-hidden border-t-8 border-accent">
                     <span className="relative z-10">AUTH_AND_TRANSMIT</span>
