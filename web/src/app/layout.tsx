@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Link from "next/link";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -30,9 +31,10 @@ export default function RootLayout({
       <body className="flex flex-col min-h-full bg-background text-foreground font-serif">
         <header className="sticky top-0 z-50 w-full border-b border-gray-200/50 bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/60">
           <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center gap-2 font-display font-bold text-xl text-primary tracking-tight">
-              <span className="text-accent">M</span>anderson
-            </div>
+            <Link href="/" className="flex items-center gap-2 font-display font-bold text-xl text-primary tracking-tight group">
+              <img src="/favicon.png" alt="M" className="h-6 w-6 object-contain group-hover:scale-110 transition-transform" />
+              anderson
+            </Link>
             <nav className="flex items-center gap-6 text-sm font-black uppercase tracking-widest text-primary">
               <a href="#evidence" className="hover:text-accent transition-colors font-sans decoration-2 underline-offset-4 hover:underline">Evidence</a>
               <a href="#contact" className="hover:text-accent transition-colors font-sans decoration-2 underline-offset-4 hover:underline">Contact</a>
@@ -49,8 +51,8 @@ export default function RootLayout({
             <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500 font-sans">
               <p>&copy; {new Date().getFullYear()} Matthew Anderson. All rights reserved.</p>
               <div className="flex gap-4">
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">LinkedIn</a>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">GitHub</a>
+                <a href="https://linkedin.com/in/matthewandersonj/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">LinkedIn</a>
+                <a href="https://github.com/matholamew" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">GitHub</a>
               </div>
             </div>
           </div>

@@ -40,16 +40,16 @@ export default async function Home() {
             <div className="relative z-10">
               <div className="flex items-center gap-4 mb-20 animate-in fade-in slide-in-from-left-4 duration-700">
                 <span className="h-px w-24 bg-accent"></span>
-                <span className="text-[10px] font-black uppercase tracking-[0.5em] text-accent font-mono animate-glitch-skew">PROTOCOL_0x01: IDENTITY_BREACH</span>
+                <span className="text-[10px] font-black uppercase tracking-[0.5em] text-accent font-mono animate-glitch-skew">PROTOCOL_0x01: LEVEL_4_INTERVENTION</span>
               </div>
 
               <h1 className="text-[14vw] md:text-[12vw] font-black tracking-[-0.1em] text-primary leading-[0.7] mb-12 animate-in fade-in slide-in-from-bottom-12 duration-1000">
-                SCALING <br />
+                STABILITY <br />
                 <span className="relative inline-block text-accent hover-jitter cursor-default">
-                  THE_VOID
+                  THROUGH
                   <span className="absolute -bottom-2 left-0 w-full h-[0.1em] bg-primary/20 -z-10"></span>
                 </span> <br />
-                <span className="text-foreground italic font-serif font-light lowercase tracking-tight opacity-90 block mt-8">implicitly.</span>
+                <span className="text-foreground italic font-serif font-light lowercase tracking-tight opacity-90 block mt-8">precision.</span>
               </h1>
 
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-32">
@@ -57,8 +57,8 @@ export default async function Home() {
                 <div className="lg:col-span-6 relative">
                   <div className="absolute -top-12 left-0 text-[10px] font-mono text-primary/30 uppercase tracking-widest">[NARRATIVE_STREAM]</div>
                   <p className="text-3xl md:text-4xl text-gray-900 font-serif leading-none animate-in fade-in slide-in-from-bottom-16 duration-1000 delay-300">
-                    I provide <span className="redacted px-2">surgical interventions</span> for broken architectures.
-                    Systems optimized for <span className="redacted px-2">absolute persistence</span>.
+                    I provide <span className="redacted px-2">Level 4 Support</span> for broken SQL stacks.
+                    Writing queries from scratch, architecting <span className="redacted px-2">absolute persistence</span> for those who can't afford to fail.
                   </p>
                 </div>
 
@@ -68,8 +68,8 @@ export default async function Home() {
                     <div className="text-[10px] font-black uppercase tracking-[0.5em] mb-6 text-white/50">NODE_HEALTH</div>
                     <div className="text-6xl font-black font-sans tabular-nums mb-4 animate-flicker">99.99%</div>
                     <div className="text-[10px] font-mono opacity-80 uppercase tracking-widest leading-loose">
-                      [SUCCESS] Uptime record <br />
-                      [SUCCESS] Redundancy verified
+                      [SUCCESS] DBA Intervention complete <br />
+                      [SUCCESS] SQL stack restored
                     </div>
                   </div>
                 </div>
@@ -101,57 +101,94 @@ export default async function Home() {
                 <h2 className="text-sm font-black uppercase tracking-[0.6em] text-accent mb-8 font-sans animate-flicker pointer-events-none">02 // DATA_CORRUPTION</h2>
                 <h3 className="text-8xl md:text-[12vw] font-black text-white font-sans tracking-[-0.08em] leading-[0.7]">
                   CLINICAL <br />
-                  <span className="redacted px-4 text-accent">VIOLENCE.</span>
+                  <span className="redacted px-4 text-accent">INTERVENTION.</span>
                 </h3>
               </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-              {/* Mega Card: The "High Intensity" Case Study */}
-              <div className="md:col-span-10 md:row-span-2 relative group z-10">
+              {/* Mega Card: InAPinch.run */}
+              <div className="md:col-span-8 md:row-span-2 relative group z-10">
                 <div className="relative overflow-hidden bg-white/[0.02] backdrop-blur-3xl border-2 border-white/5 p-20 transition-all hover:bg-white/[0.05] shadow-antigravity h-full group">
                   <div className="absolute top-0 right-0 p-12 opacity-5 italic font-mono text-4xl group-hover:opacity-20 transition-opacity">DATA_DUMP_01</div>
 
                   <div className="flex flex-col h-full justify-between relative z-10">
                     <div className="space-y-12">
-                      <h4 className="text-6xl md:text-8xl font-black text-white font-sans leading-[0.8] tracking-tight animate-glitch-skew">ZERO_SYNC <br />GLOBAL_HA.</h4>
+                      <h4 className="text-6xl md:text-8xl font-black text-white font-sans leading-[0.8] tracking-tight animate-glitch-skew">INAPINCH <br />.RUN</h4>
                       <p className="text-2xl text-gray-400 font-serif leading-none max-w-2xl border-l-[10px] border-accent pl-8">
-                        High-integrity database intervention for a Tier-1 FinTech.
-                        Replication latency enforced at <span className="redacted">&lt;1.2ms</span> globally.
+                        Porta-john geolocation for physiological emergencies.
+                        A web-app engineered for runners hit by the <span className="redacted">unforeseen</span>.
                       </p>
                     </div>
-                    <div className="flex flex-wrap gap-3 mt-16">
-                      {['PSQL', 'REDIS', 'GO', 'K8S'].map(t => (
-                        <span key={t} className="text-[10px] font-black bg-white/5 px-6 py-3 uppercase tracking-widest hover:bg-accent transition-all cursor-default">{t}</span>
-                      ))}
+                    <div className="flex items-center gap-8">
+                      <a href="https://inapinch.run" target="_blank" rel="noopener noreferrer" className="text-[10px] font-black bg-accent px-8 py-4 uppercase tracking-widest hover:bg-white hover:text-accent transition-all">VIEW_LIVE_URL</a>
+                      <span className="text-[10px] font-mono text-white/40 italic">// built_for_survival</span>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Red Link Overlay */}
-              <div className="md:col-span-2 md:pt-24 h-full">
-                <div className="bg-accent p-12 text-white h-full group hover-jitter relative overflow-hidden flex flex-col justify-center">
-                  <div className="absolute top-0 left-0 w-full h-[2px] bg-white/20 animate-pulse"></div>
-                  <h4 className="text-4xl font-black font-sans mb-8 leading-none italic rotate-90 origin-left ml-8">IN_A_PINCH</h4>
-                  <Link href="/projects/in-a-pinch" className="mt-auto font-black text-[10px] uppercase tracking-[0.5em] group/btn">
-                    DECODE_STRATEGY →
-                  </Link>
+              {/* Side Card: Non-Profit Context */}
+              <div className="md:col-span-4 h-full">
+                <div className="bg-primary/40 backdrop-blur-3xl border border-white/5 p-12 text-white h-full relative overflow-hidden flex flex-col justify-center">
+                  <div className="text-[10px] font-black text-accent mb-6 tracking-[0.4em]">COMMUNITY_LEADERSHIP</div>
+                  <h4 className="text-4xl font-black font-sans mb-8 leading-none italic">SOLES OF <br />MEDFIELD</h4>
+                  <p className="text-sm text-gray-400 font-serif mb-12">
+                    President of this 501(c)(3). Engineering fundraisers for scholarships and town recreational infrastructure.
+                  </p>
+                  <a href="https://solesofmedfield.run" target="_blank" rel="noopener noreferrer" className="font-black text-[10px] uppercase tracking-[0.5em] text-accent hover:text-white transition-colors">
+                    SOLES_PROTOCOLS →
+                  </a>
                 </div>
               </div>
 
-              {/* Dynamic Project (Redacted and Monospace) */}
+              {/* Dynamic Project: No As A Service */}
+              <div className="md:col-span-4 z-20 group">
+                <div className="bg-accent p-12 shadow-2xl transition-all hover:-translate-y-2">
+                  <div className="font-mono text-[8px] text-white/50 mb-6 tracking-[0.5em]">EXTRACT_CORE_PAYLOAD</div>
+                  <h4 className="text-3xl font-black text-white font-sans mb-6 uppercase tracking-tight italic">NO AS A SERVICE</h4>
+                  <p className="text-base text-white/80 font-serif mb-10 border-l border-white/20 pl-6">
+                    Raycast extension for high-integrity rejection.
+                    Built for the developer who knows how to say <span className="redacted">NO</span>.
+                  </p>
+                  <a href="https://github.com/matholamew/no-as-a-service" target="_blank" rel="noopener noreferrer" className="text-[10px] font-black uppercase tracking-[0.3em] text-white hover:underline transition-all">
+                    VIEW_SOURCE →
+                  </a>
+                </div>
+              </div>
+
+              {/* Final Project Card */}
               {(projects as Project[])?.slice(0, 1).map(project => (
-                <div key={project.id} className="md:col-span-6 md:-mt-20 z-20 group">
-                  <div className="bg-primary p-16 border-b-[20px] border-accent shadow-2xl transition-all hover:scale-105">
-                    <div className="font-mono text-[8px] text-accent mb-6 tracking-[0.8em]">EXTRACT_PROJECT_METADATA</div>
-                    <h4 className="text-4xl font-black text-white font-sans mb-8 tracking-tighter uppercase line-clamp-1 italic redacted">{project.title}</h4>
-                    <p className="text-lg text-gray-400 font-serif line-clamp-3 mb-10 border-l border-white/20 pl-6">{project.description}</p>
-                    <a href={project.live_url} className="text-[10px] font-black uppercase tracking-[0.3em] text-accent hover:text-white transition-colors flex items-center gap-4">
+                <div key={project.id} className="md:col-span-8 z-0">
+                  <div className="bg-white/[0.02] backdrop-blur-3xl border border-white/5 p-12 h-full flex flex-col justify-between">
+                    <div>
+                      <div className="font-mono text-[8px] text-white/30 mb-6 tracking-[0.8em]">SYSTEM_REPOSITORY_DUMP</div>
+                      <h4 className="text-3xl font-black text-white font-sans mb-6 uppercase tracking-tight italic redacted truncate">{project.title}</h4>
+                      <p className="text-lg text-gray-400 font-serif line-clamp-2 pl-6 border-l border-white/10">{project.description}</p>
+                    </div>
+                    <a href={project.live_url} className="mt-12 text-[10px] font-black uppercase tracking-[0.3em] text-accent hover:text-white transition-colors flex items-center gap-4">
                       <span className="h-px w-10 bg-accent"></span> RAW_PAYLOAD_VIEW
                     </a>
                   </div>
                 </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. The Tech Stack (Monospace Schema Dump) */}
+      <section className="py-32 bg-white border-y-[10px] border-primary">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row justify-between items-center gap-16">
+            <h2 className="text-3xl font-black text-primary font-sans tracking-[-0.05em] uppercase italic group">
+              THE_SCHEMA [<span className="group-hover:text-accent transition-colors">SQL_SCRATCH</span>]
+            </h2>
+            <div className="flex flex-wrap justify-center gap-x-20 gap-y-12">
+              {['PostgreSQL', 'SQL_Surgical', 'DBA_Intervention', 'Next.js', 'Cloudflare', 'Redis'].map(tech => (
+                <span key={tech} className="text-sm font-black uppercase tracking-[0.6em] font-sans text-gray-300 hover:text-accent hover-jitter cursor-default transition-all">
+                  {tech.replace('_', ' ')}
+                </span>
               ))}
             </div>
           </div>
@@ -175,12 +212,12 @@ export default async function Home() {
               </h3>
 
               <div className="space-y-8 font-mono text-sm tracking-widest uppercase text-primary/60">
-                <div className="flex items-center gap-4 hover:text-primary transition-colors cursor-pointer group">
-                  <span className="opacity-20 group-hover:opacity-100 transition-opacity">ADDR:</span> manderson-boston@sys.io
-                </div>
-                <div className="flex items-center gap-4 hover:text-primary transition-colors cursor-pointer group">
-                  <span className="opacity-20 group-hover:opacity-100 transition-opacity">USER:</span> @manderson_arch
-                </div>
+                <a href="https://linkedin.com/in/matthewandersonj/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 hover:text-primary transition-colors cursor-pointer group">
+                  <span className="opacity-20 group-hover:opacity-100 transition-opacity">LINKED:</span> /in/matthewandersonj
+                </a>
+                <a href="https://github.com/matholamew" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 hover:text-primary transition-colors cursor-pointer group">
+                  <span className="opacity-20 group-hover:opacity-100 transition-opacity">GIT:</span> @matholamew
+                </a>
               </div>
             </div>
 
@@ -219,8 +256,8 @@ export default async function Home() {
           <pre className="text-[10px] font-mono text-gray-300 inline-block text-left opacity-40 hover:opacity-100 transition-opacity select-none leading-tight">
             {`   _____ _________  _______ _   __
   / ___// ___/ __ \\/ ____/ | / /
-  \\__ \\/ __/ / / / / / / /  |/ / 
- ___/ / /___/ /_/ / /___/ /|  /  
+  \\__ \\/ __/ / / / / / / /  |/ /
+ ___/ / /___/ /_/ / /___/ /|  /
 /____/_____/\\____/\\____/_/ |_/   `}
           </pre>
           <p className="mt-8 text-[8px] font-black uppercase tracking-[1em] text-primary/20">© 2026 MANDERSON // ARCHITECTURAL_INTERVENTION // BOSTON_MA</p>
