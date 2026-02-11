@@ -54,17 +54,17 @@ export default async function Home() {
 
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 mt-20 md:mt-32">
                 <div className="lg:col-span-1" />
-                <div className="lg:col-span-6 relative">
+                <div className="lg:col-span-6 xl:col-span-6 relative">
                   <div className="absolute -top-10 md:-top-12 left-0 text-[10px] font-mono text-primary/30 uppercase tracking-widest">[NARRATIVE_STREAM]</div>
-                  <p className="text-2xl md:text-4xl text-gray-900 font-serif leading-none animate-in fade-in slide-in-from-bottom-16 duration-1000 delay-300">
+                  <p className="text-2xl md:text-3xl lg:text-3xl xl:text-4xl text-gray-900 font-serif leading-none animate-in fade-in slide-in-from-bottom-16 duration-1000 delay-300">
                     I provide <span className="redacted px-2">Level 4 Support</span> for broken SQL stacks.
                     Writing queries from scratch, architecting <span className="redacted px-2">absolute persistence</span> for those who can't afford to fail.
                   </p>
                 </div>
 
-                {/* Overlapping Precision Widget - Now responsive */}
-                <div className="lg:col-span-5 relative mt-16 lg:mt-0">
-                  <div className="responsive-overlap lg:absolute -top-24 lg:-left-32 lg:top-0 p-8 md:p-12 bg-primary text-white clip-brutalist shadow-antigravity animate-in fade-in zoom-in duration-1000 delay-500 z-20 group hover-jitter transition-all hover:bg-accent border-r-[15px] md:border-r-[20px] border-accent/20">
+                {/* Overlapping Precision Widget - Now with safer mid-range positioning */}
+                <div className="lg:col-span-5 xl:col-span-5 relative mt-16 lg:mt-0 lg:pl-12 xl:pl-0">
+                  <div className="responsive-overlap lg:relative xl:absolute xl:-top-24 xl:-left-32 p-8 md:p-12 bg-primary text-white clip-brutalist shadow-antigravity animate-in fade-in zoom-in duration-1000 delay-500 z-20 group hover-jitter transition-all hover:bg-accent border-r-[15px] md:border-r-[20px] border-accent/20">
                     <div className="text-[10px] font-black uppercase tracking-[0.5em] mb-4 md:mb-6 text-white/50">NODE_HEALTH</div>
                     <div className="text-4xl md:text-6xl font-black font-sans tabular-nums mb-4 animate-flicker">99.99%</div>
                     <div className="text-[9px] md:text-[10px] font-mono opacity-80 uppercase tracking-widest leading-loose">
@@ -93,8 +93,8 @@ export default async function Home() {
       </section>
 
       {/* 2. The Evidence Grid (Extreme Skewed Overload) */}
-      <section id="evidence" className="relative py-32 md:py-64 bg-background-dark text-white overflow-hidden scanlines grain-texture border-y-[10px] md:border-y-[20px] border-accent lg:skew-brutalist mt-20 md:mt-32">
-        <div className="lg:unskew-brutalist">
+      <section id="evidence" className="relative py-32 md:py-64 bg-background-dark text-white overflow-hidden scanlines grain-texture border-y-[10px] md:border-y-[20px] border-accent xl:skew-brutalist mt-20 md:mt-32">
+        <div className="xl:unskew-brutalist">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-20">
             <div className="flex flex-col lg:flex-row justify-between items-start gap-8 md:gap-12 mb-20 md:mb-40">
               <div className="relative">
@@ -112,16 +112,16 @@ export default async function Home() {
                 <div className="relative overflow-hidden bg-white/[0.02] backdrop-blur-3xl border-2 border-white/5 p-8 md:p-20 transition-all hover:bg-white/[0.05] shadow-antigravity h-full group">
                   <div className="absolute top-0 right-0 p-8 md:p-12 opacity-5 italic font-mono text-2xl md:text-4xl group-hover:opacity-20 transition-opacity">DATA_DUMP_01</div>
 
-                  <div className="flex flex-col sm:flex-row sm:items-center gap-8 md:gap-12 mt-12 relative z-10">
-                    <div className="space-y-6 md:space-y-8">
-                      <h4 className="text-4xl md:text-6xl lg:text-8xl font-black text-white font-sans leading-[0.8] tracking-tight animate-glitch-skew">INAPINCH <br />.RUN</h4>
-                      <p className="text-lg md:text-2xl text-gray-400 font-serif leading-tight max-w-2xl border-l-[6px] md:border-l-[10px] border-accent pl-6 md:pl-8">
+                  <div className="flex flex-col xl:flex-row xl:items-center gap-8 md:gap-12 mt-12 relative z-10">
+                    <div className="space-y-6 md:space-y-8 flex-1">
+                      <h4 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-white font-sans leading-[0.8] tracking-tight animate-glitch-skew">INAPINCH <br />.RUN</h4>
+                      <p className="text-lg md:text-xl lg:text-2xl text-gray-400 font-serif leading-tight max-w-2xl border-l-[6px] md:border-l-[10px] border-accent pl-6 md:pl-8">
                         Porta-john geolocation for physiological emergencies.
                         A web-app engineered for runners hit by the <span className="redacted">unforeseen</span>.
                       </p>
                     </div>
-                    <div className="flex flex-wrap items-center gap-6 mt-6 sm:mt-12">
-                      <a href="https://inapinch.run" target="_blank" rel="noopener noreferrer" className="text-[10px] font-black bg-accent px-8 py-4 uppercase tracking-widest hover:bg-white hover:text-accent transition-all">VIEW_LIVE_URL</a>
+                    <div className="flex flex-wrap items-center gap-6 mt-6 xl:mt-0 xl:self-end pb-4">
+                      <a href="https://inapinch.run" target="_blank" rel="noopener noreferrer" className="text-[10px] font-black bg-accent px-8 py-4 uppercase tracking-widest hover:bg-white hover:text-accent transition-all whitespace-nowrap">VIEW_LIVE_URL</a>
                       <span className="text-[9px] md:text-[10px] font-mono text-white/40 italic">// built_for_survival</span>
                     </div>
                   </div>
