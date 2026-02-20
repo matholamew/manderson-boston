@@ -15,33 +15,6 @@ export default async function Home() {
     .order('start_date', { ascending: false })
     .limit(90);
 
-  const mockRunningStats: RunningStat[] = [
-    {
-      id: "mock1",
-      strava_id: 1234567890,
-      activity_name: "Morning Charles River Loop [MOCK DATA]",
-      distance_meters: 8046.72,
-      moving_time: 2400,
-      average_heartrate: 155,
-      start_date: new Date(Date.now() - 86400000).toISOString(),
-      poly_line: "i~raG|nzpLi@q@[e@O_@Ea@Ac@Ca@Ie@Ka@Me@Og@Qe@Se@Ue@We@Ye@[e@]e@_@e@a@e@c@e@e@e@g@e@i@e@k@e@m@e@o@e@q@e@s@e@u@e@w@e@y@e@{@e@}A??",
-      updated_at: new Date().toISOString()
-    },
-    {
-      id: "mock2",
-      strava_id: 1234567891,
-      activity_name: "Tempo Run [MOCK DATA]",
-      distance_meters: 10000.00,
-      moving_time: 2700,
-      average_heartrate: 168,
-      start_date: new Date(Date.now() - 86400000 * 3).toISOString(),
-      poly_line: "i~raG|nzpLi@q@[e@O_@Ea@Ac@Ca@Ie@Ka@Me@Og@Qe@Se@Ue@We@Ye@[e@]e@_@e@a@e@c@e@e@e@g@e@i@e@k@e@m@e@o@e@q@e@s@e@u@e@w@e@y@e@{@e@}A??",
-      updated_at: new Date().toISOString()
-    }
-  ];
-
-  const finalRuns = (runningStats?.length ? runningStats : mockRunningStats) as RunningStat[];
-
   return (
     <div className="relative isolate min-h-screen selection:bg-accent selection:text-white bg-background overflow-x-hidden">
       {/* Background Grid & Spotlight */}
@@ -214,7 +187,7 @@ export default async function Home() {
       {/* 2.5 The Data Pipeline (Strava Integration) */}
       <section className="py-20 md:py-32 relative z-20 -mt-10 md:-mt-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <PerformanceDashboard recentRuns={(runningStats as RunningStat[]) || []} />
+          <PerformanceDashboard recentRuns={((runningStats as unknown) as RunningStat[]) || []} />
         </div>
       </section>
 
