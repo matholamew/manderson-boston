@@ -15,6 +15,33 @@ export default async function Home() {
     .order('start_date', { ascending: false })
     .limit(90);
 
+  const mockRunningStats: RunningStat[] = [
+    {
+      id: "mock1",
+      strava_id: 1234567890,
+      activity_name: "Morning Charles River Loop [MOCK DATA]",
+      distance_meters: 8046.72,
+      moving_time: 2400,
+      average_heartrate: 155,
+      start_date: new Date(Date.now() - 86400000).toISOString(),
+      poly_line: "i~raG|nzpLi@q@[e@O_@Ea@Ac@Ca@Ie@Ka@Me@Og@Qe@Se@Ue@We@Ye@[e@]e@_@e@a@e@c@e@e@e@g@e@i@e@k@e@m@e@o@e@q@e@s@e@u@e@w@e@y@e@{@e@}A??",
+      updated_at: new Date().toISOString()
+    },
+    {
+      id: "mock2",
+      strava_id: 1234567891,
+      activity_name: "Tempo Run [MOCK DATA]",
+      distance_meters: 10000.00,
+      moving_time: 2700,
+      average_heartrate: 168,
+      start_date: new Date(Date.now() - 86400000 * 3).toISOString(),
+      poly_line: "i~raG|nzpLi@q@[e@O_@Ea@Ac@Ca@Ie@Ka@Me@Og@Qe@Se@Ue@We@Ye@[e@]e@_@e@a@e@c@e@e@e@g@e@i@e@k@e@m@e@o@e@q@e@s@e@u@e@w@e@y@e@{@e@}A??",
+      updated_at: new Date().toISOString()
+    }
+  ];
+
+  const finalRuns = (runningStats?.length ? runningStats : mockRunningStats) as RunningStat[];
+
   return (
     <div className="relative isolate min-h-screen selection:bg-accent selection:text-white bg-background overflow-x-hidden">
       {/* Background Grid & Spotlight */}
@@ -194,17 +221,37 @@ export default async function Home() {
       {/* 3. The Tech Stack (Monospace Schema Dump) */}
       <section className="py-20 md:py-32 bg-white border-y-[8px] md:border-y-[10px] border-primary">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row justify-between items-center gap-12 md:gap-16">
+          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-12 md:gap-16 mb-16">
             <h2 className="text-2xl md:text-3xl font-black text-primary font-sans tracking-[-0.05em] uppercase italic group">
               THE_SCHEMA [<span className="group-hover:text-accent transition-colors">SQL_SCRATCH</span>]
             </h2>
-            <div className="flex flex-wrap justify-center gap-x-12 md:gap-x-20 gap-y-8 md:gap-y-12">
-              {['PostgreSQL', 'SQL_Surgical', 'DBA_Intervention', 'EDGE_RUNTIME', 'Cloudflare', 'SUPABASE_ENGINE'].map(tech => (
-                <span key={tech} className="text-xs md:text-sm font-black uppercase tracking-[0.4em] md:tracking-[0.6em] font-sans text-gray-300 hover:text-accent hover-jitter cursor-default transition-all">
+            <div className="flex flex-wrap gap-x-8 md:gap-x-12 gap-y-4">
+              {['PostgreSQL', 'SQL_Surgical', 'DBA_Intervention'].map(tech => (
+                <span key={tech} className="text-xs md:text-sm font-black uppercase tracking-[0.4em] font-sans text-gray-300 hover:text-accent hover-jitter cursor-default transition-all">
                   {tech.replace('_', ' ')}
                 </span>
               ))}
             </div>
+          </div>
+
+          <div className="bg-background-dark text-gray-300 font-mono text-xs md:text-sm p-6 md:p-10 shadow-antigravity overflow-x-auto border-4 border-primary">
+            <pre className="inline-block min-w-full"><code className="language-sql">{`-- public.running_stats definition
+
+CREATE TABLE IF NOT EXISTS running_stats (
+    id                UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    strava_id         BIGINT UNIQUE,
+    activity_name     VARCHAR,
+    distance_meters   FLOAT,
+    moving_time       INTEGER,
+    average_heartrate INTEGER,
+    start_date        TIMESTAMP WITH TIME ZONE,
+    poly_line         TEXT,
+    updated_at        TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- RLS Policies
+ALTER TABLE running_stats ENABLE ROW LEVEL SECURITY;
+CREATE POLICY "Public read access" ON running_stats FOR SELECT USING (true);`}</code></pre>
           </div>
         </div>
       </section>
