@@ -1,12 +1,19 @@
 import { supabase } from "@/lib/supabase";
-import { Project } from "@/lib/types";
+import { Project, RunningStat } from "@/lib/types";
 import Link from "next/link";
+import { PerformanceDashboard } from "@/components/PerformanceDashboard";
 
 export default async function Home() {
   const { data: projects } = await supabase
     .from('projects')
     .select('*')
     .order('created_at', { ascending: false });
+
+  const { data: runningStats } = await supabase
+    .from('running_stats')
+    .select('*')
+    .order('start_date', { ascending: false })
+    .limit(90);
 
   return (
     <div className="relative isolate min-h-screen selection:bg-accent selection:text-white bg-background overflow-x-hidden">
@@ -174,6 +181,13 @@ export default async function Home() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* 2.5 The Data Pipeline (Strava Integration) */}
+      <section className="py-20 md:py-32 relative z-20 -mt-10 md:-mt-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <PerformanceDashboard recentRuns={(runningStats as RunningStat[]) || []} />
         </div>
       </section>
 

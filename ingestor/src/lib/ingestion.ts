@@ -59,6 +59,7 @@ export async function processEvent(env: Env, event: any) {
             activity_name: activity.name,
             distance_meters: activity.distance,
             moving_time: activity.moving_time,
+            average_heartrate: activity.average_heartrate ? Math.round(activity.average_heartrate) : null,
             start_date: activity.start_date,
             poly_line: activity.map?.summary_polyline,
             updated_at: new Date().toISOString()

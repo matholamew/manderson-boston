@@ -8,6 +8,7 @@ CREATE TABLE IF NOT EXISTS running_stats (
     activity_name TEXT,
     distance_meters FLOAT,
     moving_time INTEGER,
+    average_heartrate INTEGER,
     start_date TIMESTAMP WITH TIME ZONE,
     poly_line TEXT,
     updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()

@@ -33,3 +33,25 @@ VALUES
     '#',
     false
 );
+
+-- Seed Data for Running Stats (Sample Data for Development)
+INSERT INTO running_stats (strava_id, activity_name, distance_meters, moving_time, average_heartrate, start_date, poly_line)
+VALUES
+(
+    1234567890,
+    'Morning Charles River Loop',
+    8046.72, -- 5 miles
+    2400,    -- 40 mins (8:00 pace)
+    155,
+    NOW() - INTERVAL '1 day',
+    'i~raG|nzpLi@q@[e@O_@Ea@Ac@Ca@Ie@Ka@Me@Og@Qe@Se@Ue@We@Ye@[e@]e@_@e@a@e@c@e@e@e@g@e@i@e@k@e@m@e@o@e@q@e@s@e@u@e@w@e@y@e@{@e@}A??'
+),
+(
+    1234567891,
+    'Tempo Run',
+    10000.00,
+    2700,
+    168,
+    NOW() - INTERVAL '3 days',
+    'i~raG|nzpLi@q@[e@O_@Ea@Ac@Ca@Ie@Ka@Me@Og@Qe@Se@Ue@We@Ye@[e@]e@_@e@a@e@c@e@e@e@g@e@i@e@k@e@m@e@o@e@q@e@s@e@u@e@w@e@y@e@{@e@}A??'
+);

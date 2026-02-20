@@ -15,6 +15,7 @@ export interface RunningStat {
     activity_name: string;
     distance_meters: number;
     moving_time: number;
+    average_heartrate: number | null;
     start_date: string;
     poly_line: string;
     updated_at: string;
